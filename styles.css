@@ -1,0 +1,6 @@
+#container {
+    display: flex;
+    width: 100vw;
+    align-items: flex-start;
+    background-color: rgb(29, 165, 97);
+}
