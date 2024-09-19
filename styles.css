@@ -1,19 +1,22 @@
 #container {
     display: flex;
-    justify-content: left;
+    justify-content: normal;
     align-items: flex-start;
+    align-content: flex-start;
     flex-wrap: wrap;
 
-    width: 96vh;
-    height: 96vh;
+    max-width: 640px;
+    max-height: 640px;
     /* background-color: rgb(29, 165, 97); */
 }
 
 #bigDiv {
     display: flex;
     justify-content: left;
-    align-items:center;
+    align-items: start;
     gap: 25px;
+    height: 650px;
+    width: 100vw;
 }
 
 #sideMenu {

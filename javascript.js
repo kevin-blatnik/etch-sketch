@@ -8,35 +8,29 @@ const etchSketch = {
 
     addGrid : function(rows,cols) {
         let squareDiv = null;
-        
-        let maxWindowHeight = window.innerHeight;
 
         //Empty Container first
         this.emptyContainer();
 
         for(let i=0; i<rows; i++) {
-            
             for(let j=0; j<cols; j++) {
                 squareDiv = document.createElement("div");   
+                this.containerRef.appendChild(squareDiv);
                 squareDiv.id = 'gridBox' + i + "-"+ j; 
                 squareDiv.row = i;
                 squareDiv.col = j;
-
-                squareDiv.style.flexShrink = "0";
-                squareDiv.style.flexGrow = "1";
                 
-                squareDiv.style.width = Math.floor(maxWindowHeight/rows) + 'px';
-                squareDiv.style.height = Math.floor(maxWindowHeight/cols) + 'px'; //to make square
+                squareDiv.style.width = (640/rows) + 'px';
+                squareDiv.style.height = (640/cols) + 'px'; //to make square
 
-                this.containerRef.style.width = squareDiv.style.width * rows;
-                this.containerRef.style.height = squareDiv.style.height * cols;
-
+                //grows to fill "extra space from flex wrap"
+                squareDiv.flexBasis =(640/rows) + 'px';
+                squareDiv.flexGrow = 1;
+                
                 //squareDiv.style.border = '4em solid gray'; 
                 squareDiv.style.backgroundColor = "gray";
-                squareDiv.innerText = '.';
 
 
-                this.containerRef.appendChild(squareDiv);
            }
         }
     },
