@@ -13,7 +13,7 @@ const etchSketch = {
         for(let i=0; i<rows; i++) {
             for(let j=0; j<cols; j++) {
                 squareDiv = document.createElement("div");   
-                squareDiv.id = 'gridBox' + i + "-" + j; 
+                squareDiv.id = 'gridBox' + i + "-"+ j; 
                 squareDiv.row = i;
                 squareDiv.col = j;
                 squareDiv.style.width = '6vh';
@@ -37,8 +37,15 @@ const etchSketch = {
                 targeted.style.backgroundColor = "black";
             }
         })
+    },
+    emptyContainer : function() {
+        while(this.containerRef.hasChildNodes()) {
+            this.containerRef.removeChild(this.containerRef.lastChild);
+        }
+        //Have to remove listener and readd?
     }
 }
 
 etchSketch.addGrid();
 etchSketch.addHover();
+etchSketch.emptyContainer();
