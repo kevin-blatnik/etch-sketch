@@ -8,3 +8,18 @@
     height: 96vh;
     background-color: rgb(29, 165, 97);
 }
+
+#bigDiv {
+    display: flex;
+    justify-content: left;
+    align-items:center;
+    gap: 25px;
+}
+
+#sideMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
