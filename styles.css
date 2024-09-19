@@ -1,6 +1,10 @@
 #container {
     display: flex;
-    width: 100vw;
+    justify-content: left;
     align-items: flex-start;
+    flex-wrap: wrap;
+
+    width: 96vh;
+    height: 96vh;
     background-color: rgb(29, 165, 97);
 }
