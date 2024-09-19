@@ -28,7 +28,8 @@ const etchSketch = {
                 squareDiv.flexGrow = 1;
                 
                 //squareDiv.style.border = '4em solid gray'; 
-                squareDiv.style.backgroundColor = "gray";
+                squareDiv.style.backgroundColor = "black";
+                squareDiv.style.opacity = 0;
 
 
            }
@@ -36,12 +37,11 @@ const etchSketch = {
     },
     addHover : function() {
         this.containerRef.addEventListener('mouseover', ev => {
-            //console.log(ev.target);
             const targeted = document.getElementById(ev.target.id);
             
-            //console.log(targeted);
             if ( targeted !== null ) {
-                targeted.style.backgroundColor = "black";
+                temp = Number(targeted.style.opacity) + 0.1;
+                targeted.style.opacity = temp;
             }
         })
     },
