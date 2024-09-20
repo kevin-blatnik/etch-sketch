@@ -29,7 +29,8 @@ const etchSketch = {
                 
                 //squareDiv.style.border = '4em solid gray'; 
                 squareDiv.style.backgroundColor = "black";
-                squareDiv.style.opacity = 0;
+                if(squareDiv.style.opacity !== 1)
+                    squareDiv.style.opacity = 0;
 
 
            }
